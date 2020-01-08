@@ -1,0 +1,24 @@
+$spacing: 16px;
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: $spacing;
+  margin: $spacing;
+
+  & > div {
+    margin: $spacing;
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    margin: $spacing;
+  }
+}
