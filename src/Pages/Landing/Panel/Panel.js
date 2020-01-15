@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Context } from 'Components/Controller';
+import { Context, ACTION } from 'Components/Controller';
 
 import './Panel.scss';
 
@@ -8,7 +8,7 @@ export default () => {
   const { text } = state || {};
 
   const handleChange = ({ target: { value } }) => setState({
-    action: 'update-text',
+    action: ACTION.UPDATE_TEXT,
     value,
   });
 

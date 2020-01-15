@@ -6,12 +6,16 @@ const defaultState = {
   text: '',
 }
 
+export const ACTION = {
+  UPDATE_TEXT: 'update-text',
+}
+
 export default ({ children }) => {
   const { Provider } = Context;
 
   const [ state, setState ] = useReducer(( oldState, { action, value }) => {
     switch ( action ) {
-      case 'update-text':
+      case ACTION.UPDATE_TEXT:
         if ( typeof( value ) !== 'string' ) throw new Error( `Invalid value '${ value }' passed to action ${ action }` );
         return { ...oldState, text: value };
       default:

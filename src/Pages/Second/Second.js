@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Context } from 'Components/Controller';
+import { Context, ACTION } from 'Components/Controller';
 
 import './Second.scss';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ export default () => {
 
   const { text } = state;
 
-  const handleClick = () => setState({ action: 'update-text', value: '' });
+  const handleClick = () => setState({ action: ACTION.UPDATE_TEXT, value: '' });
 
   return (
     <div id="second">
