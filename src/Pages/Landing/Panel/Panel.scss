@@ -9,6 +9,8 @@ $spacing: 16px;
   padding: $spacing;
   margin: $spacing;
 
+  background: rgba($color: #5c20a0, $alpha: 0.2);
+
   & > div {
     margin: $spacing;
     width: 256px;
