@@ -1,9 +1,9 @@
 import React from 'react';
 import GreatGrandchild from './GreatGrandchild';
 
-export default ({ inheritedValue }) => (
+export default () => (
   <div>
     <span>Grandchild</span>
-    <GreatGrandchild inheritedValue={ inheritedValue } />
+    <GreatGrandchild />
   </div>
 )

@@ -9,7 +9,7 @@ export default () => {
 
   const handleChange = ({ target: { value } }) => setState({
     action: ACTION.UPDATE_TEXT,
-    value,
+    value: {},
   });
 
   return (

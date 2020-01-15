@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from './../../Child';
 
-export default ({ inheritedValue }) => (
-  <div>
-    <span>Great Great Grandchild</span>
-    <span>Inherited value: <span className="inherited-value">{ inheritedValue }</span></span>
-  </div>
-)
+export default () => {
+  
+  const [ inheritedValue, setInheritedValue ] = useContext( Context );
+
+  return (
+    <div>
+      <span>Great Great Grandchild</span>
+      <span>Inherited value: <span className="inherited-value">{ inheritedValue }</span></span>
+    </div>
+  )
+}
