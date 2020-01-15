@@ -7,9 +7,9 @@ export default () => {
   const [ state, setState ] = useContext( Context );
   const { text } = state || {};
 
-  const handleChange = event => setState({
+  const handleChange = ({ target: { value } }) => setState({
     action: 'update-text',
-    payload: event.target.value,
+    value,
   });
 
   return (
@@ -17,7 +17,7 @@ export default () => {
       <h3>Panel</h3>
       <div>
         <span>Value:</span>
-        <span>{ text }</span>
+        <span>&nbsp;{ text }&nbsp;</span>
       </div>
       <input value={ text } onChange={ handleChange } />
     </div>

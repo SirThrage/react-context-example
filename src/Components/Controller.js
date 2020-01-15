@@ -9,10 +9,11 @@ const defaultState = {
 export default ({ children }) => {
   const { Provider } = Context;
 
-  const [ state, setState ] = useReducer(( oldState, { action, payload }) => {
+  const [ state, setState ] = useReducer(( oldState, { action, value }) => {
     switch ( action ) {
       case 'update-text':
-        return { ...oldState, text: payload };
+        if ( typeof( value ) !== 'string' ) throw new Error( `Invalid value '${ value }' passed to action ${ action }` );
+        return { ...oldState, text: value };
       default:
         throw new Error( `Unrecognized action: '${ action }'` );
     }

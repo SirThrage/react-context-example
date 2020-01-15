@@ -9,7 +9,7 @@ export default () => {
 
   const { text } = state;
 
-  const handleClick = () => setState({ action: 'update-text', payload: '' });
+  const handleClick = () => setState({ action: 'update-text', value: '' });
 
   return (
     <div id="second">
